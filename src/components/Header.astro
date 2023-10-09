@@ -1,0 +1,41 @@
+---
+import { Image } from 'astro:assets';
+import AppleSvg from '../icons/apple.svg'
+import PlayStoreSvg from '../icons/play-store.svg'
+import Zalee from '../images/zalee-icon.png'
+---
+
+
+<header>
+    <nav class="p-3 shadow-2xl shadow-black flex justify-between h-14 items-center border-b-2">
+        <Image src={Zalee} width={50} format='avif' alt="zalee"/>
+        <ul class="center-nav">
+            <li>Para discotecas</li>
+            <li>Nosotros</li>
+        </ul>
+        <ul class="download">
+            <li>
+                <a href="/">
+                    <div >
+                        <p>Versión web</p>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="/">
+                    <div class="apple">
+                        <Image src={AppleSvg} alt="Descarga en play store"/>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="/">
+                    <div class="play">
+                        <Image src={PlayStoreSvg} alt="Descarga en app store"/>
+                    </div>
+                </a>
+            </li>
+
+        </ul>
+    </nav>
+</header>

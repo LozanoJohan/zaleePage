@@ -1,0 +1,92 @@
+---
+import { Image } from "astro:assets";
+import AppleSvg from "../icons/apple.svg";
+import PlayStoreSvg from "../icons/play-store.svg";
+import ZaleeCellphone from "../images/event_page.png";
+---
+
+<section class="bg-[#004FFB] text-white min-h-screen p-3">
+    <div
+        class="my-0 mx-auto flex flex-wrap justify-between items-center max-w-7xl"
+    >
+        <div class="main-text mb-2 pr-3 mx-auto">
+            <h1 class="text-5xl">El texto que representa Zalee</h1>
+            <h3 class="text-xl">Otro texto que describe a zalee</h3>
+            <form class="mt-12">
+                <label class="text-xl">Mantente actualizado</label>
+                <input
+                    class="rounded-md bg-white w-full h-10 text-black p-4 mt-5"
+                    placeholder="Tu nombre"
+                    type="text"
+                />
+                <input
+                    class="rounded-md bg-white w-full h-10 text-black p-4 mt-5"
+                    placeholder="Tu correo"
+                    type="text"
+                />
+                <div class="w-full flex justify-center">
+                    <button
+                        class="rounded-md bg-white h-10 text-black px-4 my-5 mx-auto"
+                        >Me interesa! 🥳</button
+                    >
+                </div>
+            </form>
+            <div class="download-btns">
+                <a href="/">
+                    <div class="download-container apple">
+                        <Image src={PlayStoreSvg} alt="Descarga en app store" />
+                        <p>App Store</p>
+                    </div>
+                </a>
+                <a href="/">
+                    <div class="download-container play text-black">
+                        <Image src={AppleSvg} alt="Descarga en play store" />
+                        <p>Play Store</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <Image
+            class="mx-auto w-96"
+            src={ZaleeCellphone}
+            format="avif"
+            alt="zalee en un celular"
+        />
+    </div>
+</section>
+<style>
+    .download li {
+        padding: 0 5px;
+    }
+    .download li img {
+        width: 50px;
+    }
+
+    .main-text {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .download-btns {
+        display: flex;
+    }
+
+    .download-container {
+        background: #fff;
+        display: flex;
+        align-items: center;
+        border-radius: 10px;
+        padding: 10px 20px;
+        margin-right: 10px;
+        width: 150px;
+    }
+
+    .download-container > img {
+        width: 25px;
+        margin-right: 10px;
+    }
+
+    .download-container.apple > p {
+        color: black;
+    }
+</style>

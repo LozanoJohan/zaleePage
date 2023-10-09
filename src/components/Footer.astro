@@ -1,0 +1,30 @@
+---
+import XSvg from "../icons/x.svg";
+import LinkedinSvg from "../icons/linkedin.svg";
+import InstagramSvg from "../icons/instagram.svg";
+import YoutubeSvg from "../icons/yt.svg";
+import TikTokSvg from "../icons/tiktok.svg";
+import { Image } from "astro:assets";
+---
+
+
+<footer class="p-3 text-center relative border-t-2">
+    <p>Zalee</p>
+    <p>Registered ® 2023 Zalee. Todos los derechos reservados.</p>
+    <div class="flex justify-center">
+        <Image src={InstagramSvg} format="avif" alt="instagram"/>
+        <Image src={XSvg} format="avif" width={50} alt="X"/>
+        <Image src={TikTokSvg} format="avif" width={50} alt="tiktok"/>
+        <Image src={LinkedinSvg} format="avif" width={50} alt="linkedin"/>
+        <Image src={YoutubeSvg} format="avif" width={50} alt="youtube"/>
+    </div>
+</footer>
+<!-- <style is:global>
+    footer {
+        background-image: url(../icons/zalee-bg.svg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: repeat-x;
+
+    }
+</style> -->
